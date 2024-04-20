@@ -4,10 +4,6 @@
   max-width: 1200px;
 }
 
-.character-item__main .character-item__main-title {
-  margin-top: 1rem;
-}
-
 .character-item__container {
   width: 100%;
   display: grid;

@@ -25,3 +25,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.character-item__main-title {
+  margin-top: 1rem;
+}

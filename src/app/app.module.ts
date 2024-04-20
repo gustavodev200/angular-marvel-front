@@ -9,6 +9,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { CharactersDetailsComponent } from './pages/characters-details/characters-details.component';
 import { AppConfig } from './config/app.config';
 import { CharacterItemComponent } from './pages/character-item/character-item.component';
+import { SkeletonLoadingComponent } from './components/skeleton-loading/skeleton-loading.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { AboutSectionComponent } from './pages/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { CharacterItemComponent } from './pages/character-item/character-item.co
     FooterComponent,
     CharactersDetailsComponent,
     CharacterItemComponent,
+    SkeletonLoadingComponent,
+    BlogComponent,
+    AboutSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AppConfig],
