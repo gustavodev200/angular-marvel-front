@@ -1,4 +1,10 @@
-.character-card__container {
+.character-item__main {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.character-item__container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -6,39 +12,40 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .character-card__container {
+  .character-item__container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 900px) {
-  .character-card__container {
+  .character-item__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .character-card__container {
+  .character-item__container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.character-card__container .character-card {
+.character-item__container .character-item {
   width: 250px;
   height: 380px;
+  margin-top: 2rem;
   border-radius: 10px;
   background: #c6c6c6;
 }
 
-.character-card__container .character-card .character-card__image {
+.character-item__container .character-item .character-item__image {
   width: inherit;
   height: 220px;
   border-radius: 10px 10px 0 0;
 }
 
-.character-card__container
-  .character-card
-  .character-card__content-description {
+.character-item__container
+  .character-item
+  .character-item__content-description {
   width: 100%;
   height: calc(100% - 230px);
   display: flex;

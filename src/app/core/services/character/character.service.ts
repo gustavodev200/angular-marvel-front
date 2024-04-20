@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { AppConfig } from 'src/app/config/app.config';
-import { ErrorHandlerService } from '../error-handler/error-handler.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharacterService {
-  constructor(
-    private http: HttpClient,
-    private appConfig: AppConfig,
-    private errorHandler: ErrorHandlerService
-  ) {}
+  constructor(private http: HttpClient, private appConfig: AppConfig) {}
 
-  getAll(): Observable<any> {
+  getAllCharacters(offset: number, limit: number): Observable<any> {
+    let params = new HttpParams();
+    params = params.append('offset', offset.toString());
+    params = params.append('limit', limit.toString());
     return this.http.get<any>(
-      `${this.appConfig.apiURL}?ts=${this.appConfig.ts}&apikey=${this.appConfig.public_key}&hash=${this.appConfig.hash}`
+      this.appConfig.data.base_url +
+        `?limit=` +
+        `${limit}` +
+        `&offset=` +
+        `${offset}` +
+        `&ts=${this.appConfig.data.ts}&apikey=${this.appConfig.data.public_key}&hash=${this.appConfig.data.hash}`
     );
   }
 }

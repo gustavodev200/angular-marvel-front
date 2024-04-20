@@ -7,9 +7,8 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { CharactersDetailsComponent } from './pages/characters-details/characters-details.component';
-import { CharacterCardComponent } from './components/character-card/character-card.component';
-import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
 import { AppConfig } from './config/app.config';
+import { CharacterItemComponent } from './pages/character-item/character-item.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { AppConfig } from './config/app.config';
     NavBarComponent,
     FooterComponent,
     CharactersDetailsComponent,
-    CharacterCardComponent,
-    HeroSectionComponent,
+    CharacterItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AppConfig],

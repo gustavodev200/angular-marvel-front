@@ -1,0 +1,41 @@
+<main class="character-item__main">
+  <div class="character-item__filters">
+    <input type="text" />
+    <nav class="character-item__filters-pagination">
+      <button (click)="previousPage()" [disabled]="offset === 0">
+        Anterior
+      </button>
+      <span>{{ currentPage() }} de {{ totalPages() }}</span>
+
+      <button
+        (click)="nextPage()"
+        [disabled]="offset + limit >= totalCharacters"
+      >
+        Próximo
+      </button>
+    </nav>
+  </div>
+
+  <div class="character-item__container">
+    <div *ngFor="let character of characters" class="character-item">
+      <img
+        class="character-item__image"
+        src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+        alt="{{ character.name }}"
+        loading="lazy"
+      />
+      <div class="character-item__content-description">
+        <div>
+          <h3>{{ character.name }}</h3>
+
+          <span
+            ><strong>Modificado: </strong
+            >{{ character.modified | date : "dd/MM/yyyy" }}</span
+          >
+        </div>
+
+        <a routerLink="/{{ character.id }}">See more</a>
+      </div>
+    </div>
+  </div>
+</main>
