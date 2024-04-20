@@ -1,0 +1,24 @@
+.nav-bar {
+  border-bottom: 1px solid #cccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.nav-bar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style-type: none;
+}
