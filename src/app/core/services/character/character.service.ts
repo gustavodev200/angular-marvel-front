@@ -22,4 +22,12 @@ export class CharacterService {
         `&ts=${this.appConfig.data.ts}&apikey=${this.appConfig.data.public_key}&hash=${this.appConfig.data.hash}`
     );
   }
+
+  getCharacterById(id: number): Observable<any> {
+    return this.http.get<any>(
+      this.appConfig.data.base_url +
+        `/${id}` +
+        `?ts=${this.appConfig.data.ts}&apikey=${this.appConfig.data.public_key}&hash=${this.appConfig.data.hash}`
+    );
+  }
 }

@@ -1,3 +1,16 @@
 <main class="section-container">
-  <h1>Characters Details</h1>
+  <h1 class="character-item__main-title">Characters Details</h1>
+
+  <div class="character-item__content" *ngFor="let character of characters">
+    <div class="character-item__character">
+      <img
+        src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+        alt="{{ character.name }}"
+        loading="lazy"
+      />
+      <h2>{{ character.name }}</h2>
+    </div>
+
+    <div class="character-item__description">Infos</div>
+  </div>
 </main>

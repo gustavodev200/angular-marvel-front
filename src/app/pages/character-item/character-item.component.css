@@ -93,3 +93,20 @@ span {
 .character-item__filters .character-item__filters-pagination-current-page {
   margin: 0px 1rem;
 }
+
+.character-item__content-description .character-item__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 0px;
+  background: #3498db;
+  color: white;
+  transition: ease 1s background;
+}
+
+.character-item__content-description .character-item__link:hover {
+  background: #21618c;
+}
