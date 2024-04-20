@@ -4,6 +4,10 @@
   max-width: 1200px;
 }
 
+.character-item__main .character-item__main-title {
+  margin-top: 1rem;
+}
+
 .character-item__container {
   width: 100%;
   display: grid;
@@ -32,7 +36,7 @@
 .character-item__container .character-item {
   width: 250px;
   height: 380px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border-radius: 10px;
   background: #c6c6c6;
 }
@@ -67,4 +71,29 @@ h3 {
 span {
   margin-top: 1rem;
   font-size: 14px;
+}
+/* Filters */
+
+.character-item__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.character-item__filters .character-item__filters-pagination-button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background: #dadada;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 1s;
+}
+
+.character-item__filters .character-item__filters-pagination-button:hover {
+  background: #f2f2f2;
+}
+
+.character-item__filters .character-item__filters-pagination-current-page {
+  margin: 0px 1rem;
 }

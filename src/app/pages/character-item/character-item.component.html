@@ -1,13 +1,23 @@
 <main class="character-item__main">
+  <div class="character-item__main-title">
+    <h1>Catálogo Marvel</h1>
+  </div>
   <div class="character-item__filters">
-    <input type="text" />
+    <span>{{ totalCharacters }} results</span>
     <nav class="character-item__filters-pagination">
-      <button (click)="previousPage()" [disabled]="offset === 0">
+      <button
+        class="character-item__filters-pagination-button"
+        (click)="previousPage()"
+        [disabled]="offset === 0"
+      >
         Anterior
       </button>
-      <span>{{ currentPage() }} de {{ totalPages() }}</span>
+      <span class="character-item__filters-pagination-current-page"
+        >{{ currentPage() }} de {{ totalPages() }}</span
+      >
 
       <button
+        class="character-item__filters-pagination-button"
         (click)="nextPage()"
         [disabled]="offset + limit >= totalCharacters"
       >
