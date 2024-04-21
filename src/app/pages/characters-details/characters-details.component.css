@@ -32,6 +32,7 @@
 .character-item__content .character-item__character {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 678px) {
