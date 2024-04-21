@@ -12,6 +12,7 @@ import { CharacterItemComponent } from './pages/character-item/character-item.co
 import { SkeletonLoadingComponent } from './components/skeleton-loading/skeleton-loading.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { AboutSectionComponent } from './pages/about-section/about-section.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AboutSectionComponent } from './pages/about-section/about-section.compo
     SkeletonLoadingComponent,
     BlogComponent,
     AboutSectionComponent,
+    PaginationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AppConfig],

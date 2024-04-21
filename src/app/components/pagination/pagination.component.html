@@ -1,0 +1,23 @@
+<div class="character-item__filters">
+  <span>{{ totalCharacters }} results</span>
+  <nav class="character-item__filters-pagination">
+    <button
+      class="character-item__filters-pagination-button"
+      (click)="handlePreviousPage()"
+      [disabled]="offset === 0"
+    >
+      Anterior
+    </button>
+    <span class="character-item__filters-pagination-current-page">
+      {{ currentPage }} de {{ totalPages }}
+    </span>
+
+    <button
+      class="character-item__filters-pagination-button"
+      (click)="handleNextPage()"
+      [disabled]="offset + limit >= totalCharacters"
+    >
+      Próximo
+    </button>
+  </nav>
+</div>

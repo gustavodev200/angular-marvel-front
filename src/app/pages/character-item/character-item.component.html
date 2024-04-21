@@ -2,30 +2,16 @@
   <div class="character-item__main-title">
     <h1>Catálogo Marvel</h1>
   </div>
-  <div class="character-item__filters">
-    <span>{{ totalCharacters }} results</span>
-    <nav class="character-item__filters-pagination">
-      <button
-        class="character-item__filters-pagination-button"
-        (click)="previousPage()"
-        [disabled]="offset === 0"
-      >
-        Anterior
-      </button>
-      <span class="character-item__filters-pagination-current-page"
-        >{{ currentPage() }} de {{ totalPages() }}</span
-      >
+  <!-- FilterPagination -->
+  <app-pagination
+    [totalCharacters]="totalCharacters"
+    [limit]="limit"
+    [offset]="offset"
+    (previousPage)="onPreviousPage()"
+    (nextPage)="onNextPage()"
+  ></app-pagination>
 
-      <button
-        class="character-item__filters-pagination-button"
-        (click)="nextPage()"
-        [disabled]="offset + limit >= totalCharacters"
-      >
-        Próximo
-      </button>
-    </nav>
-  </div>
-
+  <!-- Cards  -->
   <div class="character-item__container">
     <div *ngFor="let character of characters" class="character-item">
       <img
@@ -39,8 +25,10 @@
           <h3>{{ character.name }}</h3>
 
           <span
-            ><strong>Modificado: </strong
-            >{{ character.modified | date : "dd/MM/yyyy" }}</span
+            >Modificado:
+            <strong>{{
+              character.modified | date : "dd/MM/yyyy"
+            }}</strong></span
           >
         </div>
 

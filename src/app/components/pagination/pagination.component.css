@@ -1,0 +1,23 @@
+.character-item__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.character-item__filters .character-item__filters-pagination-button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background: #dadada;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 1s;
+}
+
+.character-item__filters .character-item__filters-pagination-button:hover {
+  background: #f2f2f2;
+}
+
+.character-item__filters .character-item__filters-pagination-current-page {
+  margin: 0px 1rem;
+}

@@ -40,25 +40,17 @@ export class CharacterItemComponent implements OnInit {
     this.getAllCharacters();
   }
 
-  previousPage(): void {
+  onPreviousPage(): void {
     if (this.offset - this.limit >= 0) {
       this.offset -= this.limit;
       this.getAllCharacters();
     }
   }
 
-  nextPage(): void {
+  onNextPage(): void {
     if (this.offset + this.limit < this.totalCharacters) {
       this.offset += this.limit;
       this.getAllCharacters();
     }
-  }
-
-  currentPage(): number {
-    return Math.floor(this.offset / this.limit) + 1;
-  }
-
-  totalPages(): number {
-    return Math.ceil(this.totalCharacters / this.limit);
   }
 }
