@@ -1,16 +1,43 @@
-<main class="section-container">
+<main class="character-item__main">
   <h1 class="character-item__main-title">Characters Details</h1>
 
   <div class="character-item__content" *ngFor="let character of characters">
+    <nav class="character-item__nav">
+      <a routerLink="/">Voltar</a>
+    </nav>
     <div class="character-item__character">
-      <img
-        src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
-        alt="{{ character.name }}"
-        loading="lazy"
-      />
-      <h2>{{ character.name }}</h2>
-    </div>
+      <div class="character-item__image">
+        <img
+          src="{{ character.thumbnail.path }}.{{
+            character.thumbnail.extension
+          }}"
+          alt="{{ character.name }}"
+          loading="lazy"
+        />
+      </div>
 
-    <div class="character-item__description">Infos</div>
+      <div class="character-item__description">
+        <h2>{{ character.name }}</h2>
+        <p *ngIf="character.description !== ''">
+          Description:
+          <strong>{{ character.description }}</strong>
+        </p>
+        <span class="character-item__description-modified"
+          >Modificado:
+          <strong>{{ character.modified | date : "dd/MM/yyyy" }}</strong></span
+        >
+        <div class="character-item__details">
+          <span
+            >Quadrinhos disponíveis:
+            <strong>{{ character.comics.available }}</strong></span
+          >
+
+          <span
+            >Séries disponíveis:
+            <strong>{{ character.series.available }}</strong></span
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </main>

@@ -8,6 +8,11 @@
   height: 70px;
   margin: 0 auto;
 }
+@media screen and (max-width: 678px) {
+  .nav-bar {
+    padding: 1rem;
+  }
+}
 
 .nav-bar__logo {
   display: flex;

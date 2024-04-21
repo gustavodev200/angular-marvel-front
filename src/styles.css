@@ -29,3 +29,9 @@ body {
 .character-item__main-title {
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 678px) {
+  .character-item__main-title {
+    padding: 1rem;
+  }
+}

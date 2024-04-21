@@ -7,9 +7,9 @@ import { AboutSectionComponent } from './pages/about-section/about-section.compo
 
 const routes: Routes = [
   { path: '', component: CharacterItemComponent },
+  { path: ':id', component: CharactersDetailsComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'about', component: AboutSectionComponent },
-  { path: ':id', component: CharactersDetailsComponent },
 ];
 
 @NgModule({
