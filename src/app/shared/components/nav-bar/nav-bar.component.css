@@ -27,3 +27,19 @@
   gap: 3rem;
   list-style-type: none;
 }
+
+.nav-bar__mobile-button {
+  display: none;
+}
+
+.nav-bar__mobile {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .nav-bar__mobile-button {
+    display: block;
+  }
+  .nav-bar__list {
+    display: none;
+  }
+}

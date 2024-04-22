@@ -13,6 +13,7 @@ import { SkeletonLoadingComponent } from './components/skeleton-loading/skeleton
 import { BlogComponent } from './pages/blog/blog.component';
 import { AboutSectionComponent } from './pages/about-section/about-section.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     BlogComponent,
     AboutSectionComponent,
     PaginationComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AppConfig],

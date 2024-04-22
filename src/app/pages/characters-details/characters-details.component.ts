@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CharacterService } from 'src/app/core/services/character/character.service';
@@ -10,21 +10,24 @@ import { CharacterService } from 'src/app/core/services/character/character.serv
 })
 export class CharactersDetailsComponent implements OnInit {
   characters?: any[];
-  noDescription: string = 'No description available';
 
   constructor(
     private characterService: CharacterService,
     private route: ActivatedRoute
   ) {
     this.getCharacterById();
+    this.getIdFromRoute();
   }
 
   ngOnInit(): void {}
 
+  getIdFromRoute() {
+    return Number(this.route.snapshot.paramMap.get('id'));
+  }
+
   getCharacterById(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.characterService
-      .getCharacterById(id)
+      .getCharacterById(this.getIdFromRoute())
       .subscribe((characters) => (this.characters = characters.data.results));
   }
 }

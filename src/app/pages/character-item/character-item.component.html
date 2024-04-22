@@ -32,7 +32,7 @@
           >
         </div>
 
-        <a class="character-item__link" routerLink="/{{ character.id }}"
+        <a class="character-item__link" [routerLink]="['/', character.id]"
           >See more</a
         >
       </div>
