@@ -30,6 +30,18 @@ body {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .character-item__main-title {
+    padding: 0px 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .character-item__main-title {
+    padding: 0px 2rem;
+  }
+}
+
 @media screen and (max-width: 678px) {
   .character-item__main-title {
     padding: 1rem;

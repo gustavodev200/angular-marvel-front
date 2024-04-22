@@ -8,6 +8,16 @@
   height: 70px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    padding: 0px 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .nav-bar {
+    padding: 0px 2rem;
+  }
+}
 @media screen and (max-width: 678px) {
   .nav-bar {
     padding: 1rem;

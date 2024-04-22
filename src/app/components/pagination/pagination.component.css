@@ -4,6 +4,24 @@
   justify-content: space-between;
   margin-top: 1.5rem;
 }
+@media screen and (max-width: 1200px) {
+  .character-item__filters {
+    padding: 0px 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .character-item__filters {
+    padding: 0px 2rem;
+  }
+}
+@media screen and (max-width: 678px) {
+  .character-item__filters {
+    flex-direction: column;
+    padding: 0px 1rem;
+    margin-top: 0;
+    gap: 1rem;
+  }
+}
 
 .character-item__filters .character-item__filters-pagination-button {
   border: none;

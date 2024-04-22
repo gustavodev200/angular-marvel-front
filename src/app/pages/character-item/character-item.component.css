@@ -14,18 +14,44 @@
 @media screen and (max-width: 1200px) {
   .character-item__container {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0px 3rem;
+  }
+  .character-item__container .character-item {
+    min-width: 100%;
+  }
+
+  .character-item__container .character-item .character-item__image {
+    min-width: inherit;
   }
 }
 
 @media screen and (max-width: 900px) {
   .character-item__container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0px 2rem;
+  }
+
+  .character-item__container .character-item {
+    min-width: 100%;
+  }
+
+  .character-item__container .character-item .character-item__image {
+    min-width: inherit;
   }
 }
 
 @media screen and (max-width: 576px) {
   .character-item__container {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0px 1rem;
+  }
+
+  .character-item__container .character-item {
+    min-width: 100%;
+  }
+
+  .character-item__container .character-item .character-item__image {
+    min-width: inherit;
   }
 }
 
